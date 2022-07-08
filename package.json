@@ -1,0 +1,21 @@
+{
+  "name": "httpcodes-api-tester",
+  "version": "0.0.1",
+  "description": "A simple expressjs testing API for different HTTP codes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "expressjs",
+    "nodejs"
+  ],
+  "author": "Biel Serrano Sanchez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security"
+  }
+}

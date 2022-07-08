@@ -1,0 +1,327 @@
+{
+    "informational-responses": {
+        "100": {
+            "name": "Continue",
+            "description": "This interim response indicates that the client should continue the request or ignore the response if the request is already finished.",
+            "status": ""
+        },
+        "101": {
+            "name": "Switching Protocols",
+            "description": "This code is sent in response to an Upgrade request header from the client and indicates the protocol the server is switching to.",
+            "status": ""
+        },
+        "102": {
+            "name": "Processing (WebDAV)",
+            "description": "This code indicates that the server has received and is processing the request, but no response is available yet.",
+            "status": ""
+        },
+        "103": {
+            "name": "Early Hints",
+            "description": "This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.",
+            "status": ""
+        }
+    },
+    "successful-responses": {
+        "200": {
+            "name": "OK",
+            "description": "The request succeeded. The result meaning of 'success' depends on the HTTP method.",
+            "status": ""
+        },
+        "201": {
+            "name": "Created",
+            "description": "The request succeeded, and a new resource was created as a result. This is typically the response sent after POST requests, or some PUT requests.",
+            "status": ""
+        },
+        "202": {
+            "name": "Accepted",
+            "description": "The request has been received but not yet acted upon. It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request. It is intended for cases where another process or server handles the request, or for batch processing.",
+            "status": ""
+        },
+        "203": {
+            "name": "Non-Authoritative Information",
+            "description": "This response code means the returned metadata is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy. This is mostly used for mirrors or backups of another resource. Except for that specific case, the 200 OK response is preferred to this status.",
+            "status": ""
+        },
+        "204": {
+            "name": "No Content",
+            "description": "There is no content to send for this request, but the headers may be useful. The user agent may update its cached headers for this resource with the new ones.",
+            "status": ""
+        },
+        "205": {
+            "name": "Reset Content",
+            "description": "Tells the user agent to reset the document which sent this request.",
+            "status": ""
+        },
+        "206": {
+            "name": "Partial Content",
+            "description": "This response code is used when the Range header is sent from the client to request only part of a resource.",
+            "status": ""
+        },
+        "207": {
+            "name": "Multi-status (WebDAV)",
+            "description": "Conveys information about multiple resources, for situations where multiple status codes might be appropriate.",
+            "status": ""
+        },
+        "208": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "226": {
+            "name": "",
+            "description": "",
+            "status": ""
+        }
+    },
+    "redirection-messages": {
+        "300": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "301": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "302": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "303": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "304": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "305": {
+            "name": "",
+            "description": "",
+            "status": "deprecated"
+        },
+        "306": {
+            "name": "",
+            "description": "",
+            "status": "unused-reserved"
+        },
+        "307": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "308": {
+            "name": "",
+            "description": "",
+            "status": ""
+        }
+    },
+    "client-error-responses": {
+        "400": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "401": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "402": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "403": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "404": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "405": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "406": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "407": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "408": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "409": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "410": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "411": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "412": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "413": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "414": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "415": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "416": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "417": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "418": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "421": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "422": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "423": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "424": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "425": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "426": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "428": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "429": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "431": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "451": {
+            "name": "",
+            "description": "",
+            "status": ""
+        }
+    },
+    "server-error-responses": {
+        "500": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "501": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "502": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "503": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "504": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "505": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "506": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "507": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "508": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "510": {
+            "name": "",
+            "description": "",
+            "status": ""
+        },
+        "511": {
+            "name": "",
+            "description": "",
+            "status": ""
+        }
+    }
+}
