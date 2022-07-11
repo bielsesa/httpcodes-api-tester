@@ -9,6 +9,7 @@ let requestedHttpCodeDefinition;
 
 const init = () => {
     console.debug('init informationalResponses.js');
+    // console.debug('init informationalResponses.js');
 
     // parse codesDefinition.json
     const rawData = fs.readFileSync(path.join(__dirname, '../res/httpCodesDefinition.json'));
@@ -16,8 +17,8 @@ const init = () => {
     // load into memory as a json object
     httpCodesDefinition = JSON.parse(rawData);
 
-    console.debug('httpCodesDefinition value:');
-    console.debug(httpCodesDefinition);
+    // console.debug('httpCodesDefinition value:');
+    // console.debug(httpCodesDefinition);
 };
 
 const parseHttpCode = (code) => {
@@ -39,17 +40,25 @@ router.route('/').all((req, res) => {
 
 // all codes from parsing
 router.route('/:httpCode')
-    .all((req, res) => {
-        let response = parseHttpCode(parseInt(req.params.httpCode));
-        console.debug('httpCode value:');
-        console.debug(req.params.httpCode);
-        console.debug('response value:');
-        console.debug(response);
-        // console.debug('requestedHttpCodeDefinition value:');
-        // console.debug(requestedHttpCodeDefinition);
+    .all((req, res, next) => {
+        setTimeout(() => {            
+            res.status(parseInt(req.params.httpCode))
+            .json(parseHttpCode(req.params.httpCode));
+            // try {
+            //     // let response = parseHttpCode(req.params.httpCode);
+            //     // console.debug('httpCode value:');
+            //     // console.debug(req.params.httpCode);
+            //     // console.debug('response value:');
+            //     // console.debug(response);
+            //     // console.debug('requestedHttpCodeDefinition value:');
+            //     // console.debug(requestedHttpCodeDefinition);
 
-        res.status(parseInt(req.params.httpCode))
-            .json(httpCodesDefinition['informational-responses'][req.params.httpCode]);
+            //     res.status(parseInt(req.params.httpCode))
+            //         .json(parseHttpCode(req.params.httpCode));
+            // } catch (err) {
+            //     next(err)
+            // }
+        }, 100);
     });
 
 /* 400 Bad Request */
