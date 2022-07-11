@@ -323,5 +323,6 @@
             "description": "Indicates that the client needs to authenticate to gain network access.",
             "status": ""
         }
-    }
+    },
+    "ref": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
 }
