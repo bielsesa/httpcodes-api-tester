@@ -1,6 +1,6 @@
 // 100-199 informational-responses
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 const fs = require('node:fs');
 const path = require('node:path');
 

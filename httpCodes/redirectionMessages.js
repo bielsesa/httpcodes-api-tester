@@ -1,29 +1,31 @@
 // 300-399 redirection-messages
-const express = require('express')
-const router = express.Router()
-const fs = require('fs');
+const express = require('express');
+const router = express.Router();
+const fs = require('node:fs');
+const path = require('node:path');
 
-const parseHttpCode = (code) => {
-    
-}
+let httpCodesDefinition;
+
+const init = () => {
+    // parse codesDefinition.json
+    const rawData = fs.readFileSync(path.join(__dirname, '../res/httpCodesDefinition.json'));
+    // load into memory as a json object
+    httpCodesDefinition = JSON.parse(rawData);
+};
 
 router.route('/').all((req, res) => {
-    res.send('This will return Client error HTTP codes, that range from 400 to 499.');
+    res.send('This will return Redirection messages HTTP codes, that range from 300 to 399.');
 });
 
-/* 400 Bad Request */
-router.route('/400')
-    .all((req, res) => {
-        res.status(400)
-            .send({
-                name: 'Bad Request',
-                description: 'The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).'
-            });
-    });
-router.route('/bad-request')
-    .all((req, res) => {
-        res.status(400)
-            .send('Bad Request');
-    });
+router.route('/:httpCode').all((req, res) => {
+    console.debug(req.params.httpCode);
+    let httpCodeDefinition = httpCodesDefinition['redirection-messages'][req.params.httpCode];
+    console.log(httpCodeDefinition);
+    res.status(parseInt(req.params.httpCode));
+    res.json(httpCodeDefinition);
+    res.end();
+});
+
+init();
 
 module.exports = router
