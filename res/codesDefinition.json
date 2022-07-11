@@ -63,92 +63,92 @@
             "status": ""
         },
         "208": {
-            "name": "",
-            "description": "",
+            "name": "Already Reported (WebDAV)",
+            "description": "Used inside a <dav:propstat> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.",
             "status": ""
         },
         "226": {
-            "name": "",
-            "description": "",
+            "name": "IM Used (HTTP Delta encoding)",
+            "description": "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.",
             "status": ""
         }
     },
     "redirection-messages": {
         "300": {
-            "name": "",
-            "description": "",
+            "name": "Multiple Choices",
+            "description": "The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)",
             "status": ""
         },
         "301": {
-            "name": "",
-            "description": "",
+            "name": "Moved Permanently",
+            "description": "The URL of the requested resource has been changed permanently. The new URL is given in the response.",
             "status": ""
         },
         "302": {
-            "name": "",
-            "description": "",
+            "name": "Found",
+            "description": "This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.",
             "status": ""
         },
         "303": {
-            "name": "",
-            "description": "",
+            "name": "See Other",
+            "description": "The server sent this response to direct the client to get the requested resource at another URI with a GET request.",
             "status": ""
         },
         "304": {
-            "name": "",
-            "description": "",
+            "name": "Not Modified",
+            "description": "This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response.",
             "status": ""
         },
         "305": {
-            "name": "",
-            "description": "",
+            "name": "Use Proxy",
+            "description": "Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.",
             "status": "deprecated"
         },
         "306": {
-            "name": "",
-            "description": "",
+            "name": "unused",
+            "description": "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.",
             "status": "unused-reserved"
         },
         "307": {
-            "name": "",
-            "description": "",
+            "name": "Temporary Redirect",
+            "description": "The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. This has the same semantics as the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request.",
             "status": ""
         },
         "308": {
-            "name": "",
-            "description": "",
+            "name": "Permanent Redirect",
+            "description": "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request.",
             "status": ""
         }
     },
     "client-error-responses": {
         "400": {
-            "name": "",
-            "description": "",
+            "name": "Bad Request",
+            "description": "The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
             "status": ""
         },
         "401": {
-            "name": "",
-            "description": "",
+            "name": "Unauthorized",
+            "description": "Although the HTTP standard specifies \"unauthorized\", semantically this response means \"unauthenticated\". That is, the client must authenticate itself to get the requested response.",
             "status": ""
         },
         "402": {
-            "name": "",
-            "description": "",
-            "status": ""
+            "name": "Payment Required",
+            "description": "This response code is reserved for future use. The initial aim for creating this code was using it for digital payment systems, however this status code is used very rarely and no standard convention exists.",
+            "status": "experimental"
         },
         "403": {
-            "name": "",
-            "description": "",
+            "name": "Forbidden",
+            "description": "The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server.",
             "status": ""
         },
         "404": {
-            "name": "",
-            "description": "",
+            "name": "Not Found",
+            "description": "The server can not find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 Forbidden to hide the existence of a resource from an unauthorized client. This response code is probably the most well known due to its frequent occurrence on the web.",
             "status": ""
         },
         "405": {
-            "name": "",
-            "description": "",
+            "name": "Method Not Allowed",
+            "description": "The request method is known by the server but is not supported by the target resource. For example, an API may not allow calling DELETE to remove a resource.",
             "status": ""
         },
         "406": {
