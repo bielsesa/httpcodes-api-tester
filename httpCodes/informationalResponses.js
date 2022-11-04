@@ -19,12 +19,9 @@ router.route('/').all((req, res) => {
 
 router.route('/:httpCode').all((req, res) => {
     console.debug(req.params.httpCode);
-    let intResultCode = parseInt(req.params.httpCode);
     let httpCodeDefinition = httpCodesDefinition['informational-responses'][req.params.httpCode];
-    console.debug(httpCodeDefinition);
-    
-    // res.status(intResultCode === 100 ? 200 : intResultCode);
-    res.status(intResultCode);
+    console.log(httpCodeDefinition);
+    res.status(parseInt(req.params.httpCode));
     res.json(httpCodeDefinition);
     res.end();
 });
