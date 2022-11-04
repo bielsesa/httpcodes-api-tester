@@ -324,5 +324,12 @@
             "status": ""
         }
     },
+    "custom-error-responses": {
+        "210": {
+            "name": "You Can Do It",
+            "description": "This is an encouragement message.",
+            "status": ""
+        }
+    },
     "ref": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
 }
