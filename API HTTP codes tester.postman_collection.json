@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "d8c8a916-6978-4fd7-b7e5-6251d351a4ee",
+		"name": "API HTTP codes tester",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14717882"
+	},
+	"item": [
+		{
+			"name": "Service Unavailable (503)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/server-error/501",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"server-error",
+						"501"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Continue (100)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/informational-responses/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"informational-responses",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OK (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/successful-responses/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"successful-responses",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple Choices (300)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/redirection-messages/300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"redirection-messages",
+						"300"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Found (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/client-error/404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client-error",
+						"404"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not Found (404)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/client-error/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-error",
+								"404"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "I'm a sweet potato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/custom/419",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"custom",
+						"419"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not Found (404)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/client-error/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-error",
+								"404"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
