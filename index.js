@@ -3,8 +3,9 @@
 
 const express = require('express');
 const app = express();
-const jsonParser = express.json();
-const port = 3000;
+require('dotenv').config();
+
+const port = process.env.PORT == undefined ? 3000 : process.env.PORT;
 
 const informationalResponses = require('./httpCodes/informationalResponses');
 const successfulResponses = require('./httpCodes/successfulResponses');
@@ -23,7 +24,6 @@ app.use('/redirection-messages', redirectionMessages);
 app.use('/client-error', clientError);
 app.use('/server-error', serverError);
 app.use('/custom', customCodes);
-
 
 app.listen(port, () => {
     console.log(`Tester API running on port ${port}`);

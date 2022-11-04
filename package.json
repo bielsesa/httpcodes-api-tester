@@ -15,6 +15,7 @@
   "author": "Biel Serrano Sanchez",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "fs": "^0.0.1-security"
   }
